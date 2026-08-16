@@ -4,13 +4,13 @@ server:
 spring:
   application:
     name: config-server
-  profiles:
-    active: native 
   cloud:
     config:
       server:
-        native:
-          search-locations: file:D:/config-repo/
+        git:
+          uri: https://github.com/MA3YPEH/config-repo.git
+          default-label: master
+          force-pull: true
 
 eureka:
   client:
